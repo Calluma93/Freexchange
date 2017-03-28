@@ -65,7 +65,7 @@
                                             </div></td>
                                             <td><div class="form-group">
                                             <label for="phonenumber" class="sr-only">Phone Number</label>
-                                            <input type="text" name="phonenumber" placeholder="Phone Number..." class="form-control custom-control"> 
+                                            <input type="text" name="phonenumber" placeholder="Phone Number..." class="form-control custom-control" pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$"> 
                                         </div><br>
                                     </td>
                                     </tr>

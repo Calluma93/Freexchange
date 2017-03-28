@@ -17,7 +17,7 @@
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="sr-only">Name</label>
 
-                            <input id="name" type="text" placeholder="Username..." class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                            <input id="name" type="text" placeholder="Username..." class="form-control" name="name" value="{{ old('name') }}" required autofocus pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
 
                             @if ($errors->has('name'))
                             <span class="help-block">
@@ -41,7 +41,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="sr-only">Password</label>
 
-                            <input id="password" type="password" placeholder="Password..." class="form-control" name="password" required>
+                            <input id="password" type="password" placeholder="Password..." class="form-control" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
                             @if ($errors->has('password'))
                             <span class="help-block">
@@ -52,7 +52,7 @@
 
                         <div class="form-group">
                             <label for="password-confirm" class="sr-only">Confirm Password</label>
-                            <input id="password-confirm" type="password" placeholder="Confirm Password..." class="form-control" name="password_confirmation" required>
+                            <input id="password-confirm" type="password" placeholder="Confirm Password..." class="form-control" name="password_confirmation" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
                         </div>
 
                         <div class="form-group">
