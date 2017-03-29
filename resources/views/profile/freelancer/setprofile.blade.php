@@ -55,7 +55,7 @@
                                         <td><div class="form-group{{ $errors->has('wage') ? ' has-error' : '' }}">
                                                 <label for="wage" class="sr-only">Wage</label>
 
-                                                <input id="wage" type="text" placeholder="Wage..." class="form-control" name="wage" required>
+                                                <input id="wage" type="text" placeholder="Wage..." class="form-control" name="wage" required max="10,000">
 
                                                 @if ($errors->has('wage'))
                                                 <span class="help-block">
